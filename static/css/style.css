@@ -1014,13 +1014,15 @@ img {
 .cover-active .nav-button a {
     color: #fff;
     border-color: rgba(255, 255, 255, 0.5);
-    background: transparent
+    background: #fff;
+    color: #000;
 }
 
 .cover-active .nav-button a:hover,
 .cover-active .nav-button a:focus {
-    color: #fff;
-    border-color: #fff
+    color: #f26a3d;
+    border-color: #f26a3d;
+    background: transparent;
 }
 
 .nav-button a i {
