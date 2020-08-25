@@ -44,9 +44,10 @@
         <span class="blog-description">{{ SITESUBTITLE }}</span>
         {% endif %}
         <!--Index Navigation-->
+        <div class="sub-nav">
         <ul class="menubar">
             <li><a href="index.html">Home</a></li>
-            <li><a href="https://videos.lukesmith.xyz">Videos</a>
+            <li><a href="#">Videos</a>
                 <ul>
                     <li><a href="#">YouTube</a></li>
                     <li><a href="#">Bitchute</a></li>
@@ -54,7 +55,15 @@
                 </ul>
             </li>
         
-            <li><a href="https://videos.lukesmith.xyz">Videos</a>
+            <li><a href="#">Projects</a>
+              <ul>
+                  <li><a href="#">Swoop.Team</a></li>
+                  <li><a href="#">Sysadmin Scripts</a></li>
+                  <li><a href="#">Algorithms & Such</a></li>
+              </ul>
+            </li>
+        
+            <li><a href="#">Personal</a>
               <ul>
                   <li><a href="#">YouTube</a></li>
                   <li><a href="#">Bitchute</a></li>
@@ -62,7 +71,7 @@
               </ul>
             </li>
         
-            <li><a href="https://videos.lukesmith.xyz">Videos</a>
+            <li><a href="#">Videos</a>
               <ul>
                   <li><a href="#">YouTube</a></li>
                   <li><a href="#">Bitchute</a></li>
@@ -70,15 +79,7 @@
               </ul>
             </li>
         
-            <li><a href="https://videos.lukesmith.xyz">Videos</a>
-              <ul>
-                  <li><a href="#">YouTube</a></li>
-                  <li><a href="#">Bitchute</a></li>
-                  <li><a href="#">LBRY</a></li>
-              </ul>
-            </li>
-        
-            <li><a href="https://videos.lukesmith.xyz">Videos</a>
+            <li><a href="#">Videos</a>
               <ul>
                   <li><a href="#">YouTube</a></li>
                   <li><a href="#">Bitchute</a></li>
@@ -86,6 +87,7 @@
               </ul>
             </li>
         </ul>
+        </div>
         {% if selected_cover %}
           <div class="blog-cover cover" style="background-image: url('{{ selected_cover }}')">
         {% elif selected_color %}

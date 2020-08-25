@@ -9,16 +9,19 @@ html {
     -webkit-text-size-adjust: 100%
 }
 /* custom css */
+.sub-nav {
+    position: relative;
+}
 .menubar {
     display: inline-block;
     margin: 0;
     padding: 0;
     z-index: 10;
-    position: relative;
+    top: 0;
+    position: sticky;
 }
 .menubar li {
-    display: block;
-    float: left;
+    display: inline-block;
     width: 100px;
     min-height: 1.5em;
     background: #222;
@@ -32,6 +35,7 @@ html {
 }
 .menubar li ul {
     visibility: hidden;
+    z-index: 10;
     position: absolute;
     padding-top: 10px;
 }
@@ -41,7 +45,7 @@ html {
     margin-left: -7px;
 }
 
-/* removed lines 599, */
+/* removed lines 599, 615, 574*/
 /* end custom css */
 article,
 aside,
@@ -571,11 +575,13 @@ h6 a {
     font-weight: inherit
 }
 
+/*
 p,
 ul,
 ol {
     margin: 2em auto
 }
+*/
 
 ul {
     list-style: none
@@ -612,7 +618,7 @@ ol>li:before {
     content: counter(item) ". " !important;
     counter-increment: item
 }
-
+/*
 ol ol,
 ul ul,
 ul ol,
@@ -620,7 +626,7 @@ ol ul {
     padding-left: 30px;
     margin: 15px 0
 }
-
+*/
 hr {
     display: block;
     height: 1px;
