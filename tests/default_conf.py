@@ -105,7 +105,7 @@ SITEMAP = {
 DISQUS_SITENAME = "attilademo"
 
 # Analytics
-GOOGLE_ANALYTICS = "UA-3546274-12"
+#GOOGLE_ANALYTICS = "UA-3546274-12"
 
 THEME = 'attila'
 
