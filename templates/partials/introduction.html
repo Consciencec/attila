@@ -1,0 +1,16 @@
+<div class="profile-bg">
+    <div class="div-box">
+        <div>
+            {% if PROFILE_HEADING %}
+                <h1 class="about-heading">{{PROFILE_HEADING}}</h1><br>
+            {% endif %}
+            {% if PROFILE_DESCRIPTION_1 or PROFILE_DESCRIPTION_2 %}
+                <p>{{PROFILE_DESCRIPTION_1}}</p>
+                <p>{{PROFILE_DESCRIPTION_2}}</p>
+            {% endif %}
+        </div>
+        <div>
+            <img src="{{SELFIE}}" alt="profile" class="profile-pic">
+        </div>
+    </div>
+</div>

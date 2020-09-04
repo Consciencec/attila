@@ -28,79 +28,46 @@
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header id="blog-header" {% if selected_cover or selected_color %}class="has-cover"{% endif %}>
-      <div class="inner">
-        <nav id="navigation">
-          {% if SITE_LOGO %}
-          <span class="blog-logo">
-            <a href="{{ SITEURL }}/"><img src="{{SITE_LOGO}}" alt="Blog Logo" /></a>
-          </span>
+      <nav id="navigation">
+        {% if SITE_LOGO %}
+        <span class="blog-logo">
+          <a href="{{ SITEURL }}/"><img src="{{SITE_LOGO}}" alt="Blog Logo" /></a>
+        </span>
+        {% endif %}
+        <span id="menu-button" class="nav-button">
+          <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+        </span>
+      </nav>
+      <div class="intro-box">
+        <div>
+          <h1 class="blog-name"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+          {% if SITESUBTITLE %}
+          <span class="blog-description">{{ SITESUBTITLE }}</span>
           {% endif %}
-          <span id="menu-button" class="nav-button">
-            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
-          </span>
-        </nav>
-        <h1 class="blog-name"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-        {% if SITESUBTITLE %}
-        <span class="blog-description">{{ SITESUBTITLE }}</span>
-        {% endif %}
-        <!--Index Navigation-->
-        <div class="sub-nav">
-        <ul class="menubar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Videos</a>
-                <ul>
-                    <li><a href="#">YouTube</a></li>
-                    <li><a href="#">Bitchute</a></li>
-                    <li><a href="#">LBRY</a></li>
-                </ul>
-            </li>
-        
-            <li><a href="#">Projects</a>
-              <ul>
-                  <li><a href="#">Swoop.Team</a></li>
-                  <li><a href="#">Sysadmin Scripts</a></li>
-                  <li><a href="#">Algorithms & Such</a></li>
-              </ul>
-            </li>
-        
-            <li><a href="#">Personal</a>
-              <ul>
-                  <li><a href="#">YouTube</a></li>
-                  <li><a href="#">Bitchute</a></li>
-                  <li><a href="#">LBRY</a></li>
-              </ul>
-            </li>
-        
-            <li><a href="#">Videos</a>
-              <ul>
-                  <li><a href="#">YouTube</a></li>
-                  <li><a href="#">Bitchute</a></li>
-                  <li><a href="#">LBRY</a></li>
-              </ul>
-            </li>
-        
-            <li><a href="#">Videos</a>
-              <ul>
-                  <li><a href="#">YouTube</a></li>
-                  <li><a href="#">Bitchute</a></li>
-                  <li><a href="#">LBRY</a></li>
-              </ul>
-            </li>
-        </ul>
+          <!--Index Navigation-->
+          <ul class="menubar">
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Projects</a></li>
+              <!-- moved to projects
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Music</a></li>
+              -->
+              <li><a href="#">Contact</a></li>
+          </ul>
         </div>
-        {% if selected_cover %}
-          <div class="blog-cover cover" style="background-image: url('{{ selected_cover }}')">
-        {% elif selected_color %}
-          <div class="blog-cover cover" style="background-color: {{ selected_color }}">
-        {% endif %}
       </div>
+      {% if selected_cover %}
+        <div class="blog-cover cover" style="background-image: url('{{ selected_cover }}')">
+      {% elif selected_color %}
+        <div class="blog-cover cover" style="background-color: {{ selected_color }}">
+      {% endif %}
     </header>
-
 {% endblock header %}
 
 {% block content %}
-
 <div id="index" class="container">
+  {% include "partials/introduction.html" %}
   <main class="content" role="main">
     {% include "partials/loop.html" %}
   </main>

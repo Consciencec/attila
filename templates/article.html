@@ -3,13 +3,16 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {# <!-- Choosing cover image --> #}
+{#
 {% if article.cover %}
   {% if article.cover|lower|truncate(4, True, '') == "http" %}
     {% set selected_cover = article.cover %}
   {% else %}
     {% set selected_cover = SITEURL+"/"+article.cover %}
   {% endif %}
-{% elif article.og_image %}
+#}
+
+{% if article.og_image %}
   {% if article.og_image|lower|truncate(4, True, '') == "http" %}
     {% set selected_cover = article.og_image %}
   {% else %}
@@ -79,6 +82,9 @@
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
+        <!-- TODO: csather, properly check if profile pic is set 
+        <img src="{{SELFIE}}" alt="profile" class="profile-pic">
+        -->
         <h1 class="post-title">{{ article.title }}</h1>
         <!-- TODO : Proper class for headline -->
         {% if article.headline %}
@@ -233,4 +239,16 @@
             </div>
         </article>
     </main>
-{% endblock content %}
+    <!-- TESTING COMMENTBOX -->
+    <div class="commentbox"></div>
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+    <script>
+      // import commentBox from 'commentbox.io';
+      // or
+      const commentBox = require('commentbox.io');
+      // or if using the CDN, it will be available as a global "commentBox" variable.
+
+      commentBox('5739189425405952-proj');
+    </script>
+  {% endblock content %}
+
